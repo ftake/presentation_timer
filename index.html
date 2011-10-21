@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Presentation Timer</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div id="timer">
+			<span id="time">00:00</span>
+		</div>
+		<div id="menu">
+			<input type="button" value="Start" id="btn_start-stop" />
+			<input type="button" value="Reset" id="btn_reset" />
+			<input type="button" value="Config" id="btn_config" />
+		</div>
+		<div id="config">
+			<label>Time out:
+				<input type="time" id="in_timeout" required="required" step="1" list="dl_timeout" />
+			</label>
+			<datalist id="dl_timeout">
+				<option value="00:05:00" />
+				<option value="00:10:00" />
+			</datalist>
+			<input type="button" value="Set" id="btn_set" />
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
