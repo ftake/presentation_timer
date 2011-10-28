@@ -36,6 +36,15 @@ function PresenTimer() {
 		btnStartStop.setAttribute("onclick", "timer.start()");
 		btnStartStop.setAttribute("value", "Start");
 	}
+	this.setTimeout = function(sec) {
+		this.timeout = sec;
+		this.update();
+	}
+	this.update();
+}
+
+function set() {
+	timer.setTimeout(inputTimeout.valueAsNumber / 1000);
 }
 
 var btnReset = document.getElementById("btn_reset");
@@ -47,6 +56,7 @@ btnStartStop.setAttribute("onclick", "timer.start()");
 var btnSet = document.getElementById("btn_set");
 btnSet.setAttribute("onclick", "set()");
 var fieldTime = document.getElementById("time");
+var inputTimeout = document.getElementById("in_timeout");
 
 var timer = new PresenTimer();
-
+set();
